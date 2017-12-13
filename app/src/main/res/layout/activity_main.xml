@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.engenheiroamaro.kiandamuzik.MainActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:src="@drawable/header"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/nomeDoArtista"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+
+        android:text="@string/nomeArti"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintStart_toEndOf="@+id/guiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guiaEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guiaDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="367dp" />
+
+    <TextView
+        android:id="@+id/DescArtista"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+
+        android:text="Aos 10 anos de idade os seus pais separam-se e NGA muda-se para Portugal com a sua mãe e irmã, vivendo de favor em casa de familiares. É em Portugal que NGA conhece e apaixona-se por Rap e pela cultura Hip Hop, vendo vídeos na televisão de grupos como Black Company."
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomeDoArtista" />
+
+    <TextView
+        android:id="@+id/topMusicas"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/topMusica"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintEnd_toStartOf="@+id/guiaDireita"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/guiaEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/DescArtista" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listaDeMusicas"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/guiaEsquerda"
+        tools:layout_editor_absoluteY="452dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
